@@ -1,6 +1,6 @@
 package sections.two.tdd;
 
-public class Money {
+public class Money implements Expression {
     protected int amount;
     protected String currency;
 
@@ -14,11 +14,11 @@ public class Money {
     }
 
     public static Money dollar (int amount){
-        return new Dollar(amount,"USD");
+        return new Money(amount,"USD");
     }
 
     public static Money franc (int amount){
-        return new Franc(amount,"CHF");
+        return new Money(amount,"CHF");
     }
 
     public boolean equals(Object obj) {
@@ -36,11 +36,20 @@ public class Money {
     }
 
     /**
-     * Returns a new instance of {@link Dollar} but multiplied by the parameter
+     * Returns a new instance of {@link Money} but multiplied by the parameter
      * @param multiplier number that defines by how much the amount will be multiplied
      * @return new {@link Money}
      */
     public Money times(int multiplier){
         return new Money(amount * multiplier, this.currency);
+    }
+
+    public Expression plus(Money added){
+        return new Sum(this,added);
+    }
+
+    @Override
+    public Money reduce(Bank bank, String to) {
+        return new Money(amount/bank.rate(this.currency, to), to);
     }
 }
