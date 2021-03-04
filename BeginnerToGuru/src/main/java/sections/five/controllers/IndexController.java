@@ -1,5 +1,7 @@
 package sections.five.controllers;
 
+import sections.five.exceptions.ValueNotFoundException;
+
 public class IndexController {
 
     public String index() {
@@ -7,7 +9,7 @@ public class IndexController {
         return "index";
     }
 
-    public String oupsHandler() {
-        return "unimplemented";
+    public String oopsHandler() {
+        throw new ValueNotFoundException();
     }
 }
