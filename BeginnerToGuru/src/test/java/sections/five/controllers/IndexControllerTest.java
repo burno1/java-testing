@@ -1,15 +1,17 @@
 package sections.five.controllers;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.*;
 import sections.five.exceptions.ValueNotFoundException;
 
 import java.time.Duration;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
+
 
 
 class IndexControllerTest {
@@ -23,8 +25,8 @@ class IndexControllerTest {
     @DisplayName(value = "Test Proper View is returned for index page")
     @Test
     void index() {
-        assertEquals("index", controller.index());
-        assertEquals("index", controller.index(), () -> "Wrong View Returned bro" + "Make only if you have to");
+        //AssertJ stuff
+        assertThat(controller.index()).isEqualTo("index");
     }
 
     @DisplayName("Test Exception")
@@ -64,4 +66,36 @@ class IndexControllerTest {
     void testAssumptionTrueIsTrue() {
         assumeTrue("TEST".equalsIgnoreCase("Test"));
     }
+
+    @DisplayName(value = "Test if the OS is a MAC")
+    @EnabledOnOs(OS.MAC)
+    @Test
+    void testOnMAc() {
+    }
+
+    @DisplayName(value = "Test if the OS is a Windows")
+    @EnabledOnOs(OS.WINDOWS)
+    @Test
+    void testOnWindows() {
+    }
+
+    @DisplayName(value = "Test if the jre is v8")
+    @EnabledOnJre(JRE.JAVA_8)
+    @Test
+    void testOnJava8() {
+    }
+
+    @DisplayName(value = "Test if the jre is v11")
+    @EnabledOnJre(JRE.JAVA_11)
+    @Test
+    void testOnJava11() {
+    }
+
+    // Don't know how to make this work, bye!
+    @DisplayName(value = "Test if user is {INSERT YOUR USERNAME HERE}}")
+    @EnabledIfEnvironmentVariable(named="USER", matches = "yourname")
+    @Test
+    void testUserBruno() {
+    }
+
 }
