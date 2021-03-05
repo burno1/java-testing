@@ -3,6 +3,7 @@ package sections.five.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import sections.six.ControllerTests;
 import sections.five.fauxspring.ModelMapImpl;
 import sections.five.model.Vet;
 import sections.five.services.SpecialtyService;
@@ -18,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Author: Bruno Fernandes
  * Created at : 05/03/2021
  */
-class VetControllerTest {
+class VetControllerTest implements ControllerTests {
     VetService vetService;
     SpecialtyService specialtyService;
     VetController vetController;

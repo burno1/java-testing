@@ -1,9 +1,7 @@
 package sections.five.controllers;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
+import sections.six.ControllerTests;
 import sections.five.exceptions.ValueNotFoundException;
 
 import java.time.Duration;
@@ -13,8 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 
-
-class IndexControllerTest {
+class IndexControllerTest implements ControllerTests {
     IndexController controller;
 
     @BeforeEach

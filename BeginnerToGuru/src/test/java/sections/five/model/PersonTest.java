@@ -1,11 +1,14 @@
 package sections.five.model;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+import sections.six.ModelTests;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class PersonTest {
+class PersonTest implements ModelTests {
 
+    @DisplayName("Grouped Aassertions")
     @Test
     void groupedAssertions() {
         // given
@@ -17,6 +20,7 @@ class PersonTest {
                 () -> assertEquals("Fernandes", person.getLastName()));
     }
 
+    @DisplayName("Grouped Assertions with message")
     @Test
     void groupedAssertionMsgs() {
         // given
@@ -27,4 +31,6 @@ class PersonTest {
                 () -> assertEquals("Bruno",person.getFirstName(),"First name wrong"),
                 ()-> assertEquals("Fernandes", person.getLastName(),"Lastname wrong"));
     }
+
+
 }
