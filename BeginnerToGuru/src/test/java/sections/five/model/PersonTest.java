@@ -1,6 +1,7 @@
 package sections.five.model;
 
 import org.junit.jupiter.api.*;
+import sections.petclinic.model.Person;
 import sections.six.ModelTests;
 
 import static org.junit.jupiter.api.Assertions.assertAll;

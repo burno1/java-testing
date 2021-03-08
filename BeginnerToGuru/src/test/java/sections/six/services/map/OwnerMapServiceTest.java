@@ -4,13 +4,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import sections.five.model.Owner;
-import sections.five.model.PetType;
-import sections.five.services.PetService;
-import sections.five.services.PetTypeService;
-import sections.five.services.map.OwnerMapService;
-import sections.five.services.map.PetMapService;
-import sections.five.services.map.PetTypeMapService;
+import sections.petclinic.model.Owner;
+import sections.petclinic.model.PetType;
+import sections.petclinic.services.PetService;
+import sections.petclinic.services.PetTypeService;
+import sections.petclinic.services.map.OwnerMapService;
+import sections.petclinic.services.map.PetMapService;
+import sections.petclinic.services.map.PetTypeMapService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

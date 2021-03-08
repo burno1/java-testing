@@ -1,13 +1,8 @@
 package sections.five.model;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.*;
-import sections.six.CustomArgsProvider;
+import sections.petclinic.model.Owner;
 import sections.six.ModelTests;
-
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;

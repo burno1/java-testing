@@ -3,7 +3,7 @@ package sections.six;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
-import sections.five.model.OwnerType;
+import sections.petclinic.model.OwnerType;
 
 import java.util.stream.Stream;
 

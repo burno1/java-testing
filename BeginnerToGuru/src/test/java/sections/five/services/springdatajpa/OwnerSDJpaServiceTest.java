@@ -4,9 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import sections.five.model.Owner;
-
-import static org.junit.jupiter.api.Assertions.*;
+import sections.petclinic.model.Owner;
+import sections.petclinic.services.springdatajpa.OwnerSDJpaService;
 
 @Disabled(value = "Disabled until we learn Mocking")
 class OwnerSDJpaServiceTest {

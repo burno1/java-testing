@@ -1,8 +1,9 @@
 package sections.five.controllers;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.condition.*;
+import sections.petclinic.controllers.IndexController;
 import sections.six.ControllerTests;
-import sections.five.exceptions.ValueNotFoundException;
+import sections.petclinic.exceptions.ValueNotFoundException;
 
 import java.time.Duration;
 

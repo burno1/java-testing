@@ -3,13 +3,14 @@ package sections.five.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import sections.six.ControllerTests;
 import sections.five.fauxspring.ModelMapImpl;
-import sections.five.model.Vet;
-import sections.five.services.SpecialtyService;
-import sections.five.services.VetService;
-import sections.five.services.map.SpecialityMapService;
-import sections.five.services.map.VetMapService;
+import sections.petclinic.controllers.VetController;
+import sections.six.ControllerTests;
+import sections.petclinic.model.Vet;
+import sections.petclinic.services.SpecialtyService;
+import sections.petclinic.services.VetService;
+import sections.petclinic.services.map.SpecialityMapService;
+import sections.petclinic.services.map.VetMapService;
 
 import java.util.Set;
 
