@@ -13,9 +13,7 @@ import sections.petclinic.services.springdatajpa.SpecialitySDJpaService;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.BDDMockito.given;
-import static org.mockito.BDDMockito.then;
-import static org.mockito.Mockito.*;
+import static org.mockito.BDDMockito.*;
 
 /**
  * Author: Bruno Fernandes
@@ -68,7 +66,7 @@ class SpecialitySDJpaServiceTest {
         // given - none
 
         //when
-        specialitySDJpaService.deleteById(1l);
+        specialitySDJpaService.deleteById(1L);
 
         //then
         then(specialtyRepository).should(times(1)).deleteById(1L);
@@ -80,8 +78,8 @@ class SpecialitySDJpaServiceTest {
         //given - none
 
         //when
-        specialitySDJpaService.deleteById(1l);
-        specialitySDJpaService.deleteById(1l);
+        specialitySDJpaService.deleteById(1L);
+        specialitySDJpaService.deleteById(1L);
 
         //then
         then(specialtyRepository).should(atLeastOnce()).deleteById(anyLong());
@@ -93,8 +91,8 @@ class SpecialitySDJpaServiceTest {
         //given - none
 
         //when
-        specialitySDJpaService.deleteById(1l);
-        specialitySDJpaService.deleteById(1l);
+        specialitySDJpaService.deleteById(1L);
+        specialitySDJpaService.deleteById(1L);
 
         //then
         then(specialtyRepository).should(times(2)).deleteById(anyLong());
@@ -106,8 +104,8 @@ class SpecialitySDJpaServiceTest {
         //given - none
 
         //when
-        specialitySDJpaService.deleteById(1l);
-        specialitySDJpaService.deleteById(1l);
+        specialitySDJpaService.deleteById(1L);
+        specialitySDJpaService.deleteById(1L);
 
         //then
         then(specialtyRepository).should(atMost(5)).deleteById(anyLong());
@@ -119,8 +117,8 @@ class SpecialitySDJpaServiceTest {
         //given - none
 
         //when
-        specialitySDJpaService.deleteById(1l);
-        specialitySDJpaService.deleteById(1l);
+        specialitySDJpaService.deleteById(1L);
+        specialitySDJpaService.deleteById(1L);
 
         //then
         then(specialtyRepository).should(never()).deleteById(5L);

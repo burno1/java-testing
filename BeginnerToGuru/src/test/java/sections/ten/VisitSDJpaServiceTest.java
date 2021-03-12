@@ -19,7 +19,8 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.atLeastOnce;
+import static org.mockito.Mockito.times;
 
 /**
  * Author: Bruno Fernandes
@@ -61,7 +62,7 @@ class VisitSDJpaServiceTest {
         given(visitRepository.findById(1L)).willReturn(Optional.of(visit));
 
         //when
-        Visit foundVisit = service.findById(1l);
+        Visit foundVisit = service.findById(1L);
 
         //then
         then(visitRepository).should().findById(anyLong());
