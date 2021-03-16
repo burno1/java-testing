@@ -10,7 +10,7 @@ import java.util.Map;
  * Created at : 05/03/2021
  */
 public class ModelMapImpl implements Model {
-    Map<String,Object> map = new HashMap<String,Object>();
+    Map<String,Object> map = new HashMap<>();
     @Override
     public void addAttribute(String key, Object o) {
         map.put(key,o);

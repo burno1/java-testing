@@ -30,27 +30,21 @@ class IndexControllerTest implements ControllerTests {
     @DisplayName("Test Exception")
     @Test
     void oupsHandler() {
-        assertThrows(ValueNotFoundException.class, () -> {
-            controller.oopsHandler();
-        });
+        assertThrows(ValueNotFoundException.class, () -> controller.oopsHandler());
     }
 
     @Disabled("Demo of timeout")
     @DisplayName(value = "Test timeout")
     @Test
     void testTimeout() {
-        assertTimeout(Duration.ofMillis(100), () -> {
-            Thread.sleep(200);
-        });
+        assertTimeout(Duration.ofMillis(100), () -> Thread.sleep(200));
     }
 
     @Disabled("Demo of timeout preemptive")
     @DisplayName(value = "Test timeout Preemptively")
     @Test
     void testTimeoutPrempt() {
-        assertTimeoutPreemptively(Duration.ofMillis(100), () -> {
-            Thread.sleep(2000);
-        });
+        assertTimeoutPreemptively(Duration.ofMillis(100), () -> Thread.sleep(2000));
     }
 
     @DisplayName(value = "Testing Assumption")

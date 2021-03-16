@@ -54,9 +54,9 @@ class VisitSDJpaServiceTest {
     void findById() {
         Visit visit = new Visit();
 
-        when(visitRepository.findById(1l)).thenReturn(Optional.of(visit));
+        when(visitRepository.findById(1L)).thenReturn(Optional.of(visit));
 
-        Visit foundVisit = service.findById(1l);
+        Visit foundVisit = service.findById(1L);
 
         assertThat(foundVisit).isNotNull();
 

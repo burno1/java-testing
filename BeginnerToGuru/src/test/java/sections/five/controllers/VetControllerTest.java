@@ -31,8 +31,8 @@ class VetControllerTest implements ControllerTests {
         vetService = new VetMapService(specialtyService);
 
         vetController = new VetController(vetService);
-        Vet vet = new Vet(1l,"John","Doe",null);
-        Vet vet2 = new Vet(2l,"Joahne","Does",null);
+        Vet vet = new Vet(1L,"John","Doe",null);
+        Vet vet2 = new Vet(2L,"Joahne","Does",null);
 
         vetService.save(vet);
         vetService.save(vet2);

@@ -29,8 +29,8 @@ class VetSDJpaServiceTest {
     @DisplayName(value = "Delete by Id")
     @Test
     void deleteById() {
-        service.deleteById(1l);
+        service.deleteById(1L);
 
-        verify(vetRepository, atLeastOnce()).deleteById(1l);
+        verify(vetRepository, atLeastOnce()).deleteById(1L);
     }
 }
