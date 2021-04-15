@@ -31,11 +31,6 @@ public class Money implements Expression {
                 '}';
     }
 
-    /**
-     * Returns a new instance of {@link Money} but multiplied by the parameter
-     * @param multiplier number that defines by how much the amount will be multiplied
-     * @return new {@link Money}
-     */
     @Override
     public Expression times(int multiplier){
         return new Money(amount * multiplier, this.currency);
